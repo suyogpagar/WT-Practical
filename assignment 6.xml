@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <title>WINGS OF FIRE</title>
+        <author>DR.APJ ABDUL KALAM</author>
+        <publication>INDIA PUBLICATION</publication>
+        <price>100.RS</price>
+        <isbn>12345</isbn>
+        <edition>1st</edition>
+    </book>
+    <book>
+        <title>MRITYUNJAY</title>
+        <author>SHIVAJAI SAWANT</author>
+        <publication>SWRAJYA PUBLICATION</publication>
+        <price>150.RS</price>
+        <isbn>90456</isbn>
+        <edition>2nd</edition>
+    </book>
+    <book>
+        <title>SHYAM CHI AAI</title>
+        <author>SANE GURUJI</author>
+        <publication>MARATHI PUBLICATION</publication>
+        <price>50.RS</price>
+        <isbn>85759</isbn>
+        <edition>3rd</edition>
+    </book>
+    <book>
+        <title>NATSAMRAT</title>
+        <author>V.V.SHIRWADKAR(KUSUMAGRAJ)</author>
+        <publication>NASHIK PUBLICATION</publication>
+        <price>150.RS</price>
+        <isbn>10112</isbn>
+        <edition>1st</edition>
+    </book>
+    <book>
+        <title>PANIPAT</title>
+        <author>VISHWAS PATIL</author>
+        <publication>MARATHI PUBLICATION</publication>
+        <price>80.RS</price>
+        <isbn>12945</isbn>
+        <edition>4th</edition>
+    </book>
+</books>

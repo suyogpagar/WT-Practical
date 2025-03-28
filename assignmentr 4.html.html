@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form id="registrationForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+        <span class="error" id="firstNameError"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span class="error" id="passwordError"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError"></span>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="text" id="mobileNumber" name="mobileNumber">
+        <span class="error" id="mobileNumberError"></span>
+
+        <button type="button" onclick="validateForm()">Register</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            
+            const firstName = document.getElementById('firstName').value;
+            const firstNameError = document.getElementById('firstNameError');
+            if (!/^[a-zA-Z]{6,}$/.test(firstName)) {
+                firstNameError.textContent = "First name must contain only alphabets and be at least 6 characters long.";
+                isValid = false;
+            } else {
+                firstNameError.textContent = "";
+            }
+
+           
+            const password = document.getElementById('password').value;
+            const passwordError = document.getElementById('passwordError');
+            if (password.length < 6) {
+                passwordError.textContent = "Password must be at least 6 characters long.";
+                isValid = false;
+            } else {
+                passwordError.textContent = "";
+            }
+
+           
+            const email = document.getElementById('email').value;
+            const emailError = document.getElementById('emailError');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailError.textContent = "Please enter a valid email format.";
+                isValid = false;
+            } else {
+                emailError.textContent = "";
+            }
+
+            
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            const mobileNumberError = document.getElementById('mobileNumberError');
+            if (!/^\d{10}$/.test(mobileNumber)) {
+                mobileNumberError.textContent = "Mobile number must contain exactly 10 digits.";
+                isValid = false;
+            } else {
+                mobileNumberError.textContent = "";
+            }
+
+            if (isValid) {
+                alert("Registration successful!");
+            }
+        }
+    </script>
+</body>
+</html>

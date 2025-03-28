@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Clean font style */
+            background-color: #f4f4f4; /* Light background for readability */
+            color: #333; /* Neutral font color */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Center the content */
+        }
+
+        h2 {
+            background-color: #333; /* Dark header background */
+            color: white; /* White text color for contrast */
+            padding: 1em;
+            margin: 0;
+            font-size: 1.8em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add depth to the header */
+        }
+
+        button {
+            padding: 0.7em 1.5em; /* Add padding for better click area */
+            margin: 1em; /* Add spacing between buttons */
+            background-color: #007BFF; /* Blue button background */
+            color: white; /* White text color */
+            border: none;
+            border-radius: 5px; /* Rounded corners for a modern look */
+            font-size: 1em; /* Standard font size */
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        script {
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body> 
+    <h2>Assignment 5</h2>
+    <button onclick="c_date()">A Button</button>
+    <button onclick="fact()">B Button</button>
+
+    <script>
+        function c_date() {
+            var currentDate = new Date(); 
+            alert(currentDate); 
+        }
+
+        function fact() {
+            var number = prompt("Enter a number:"); 
+           
+            let factorial = 1;
+            for (let i = 1; i <= number; i++) {
+                factorial *= i;
+            }
+            alert(factorial);
+        }
+    </script>
+</body>
+</html>
